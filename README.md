@@ -132,16 +132,18 @@ autonomous-ai-rescue-drone/
 
 Tested on:
 
-Ubuntu 24.04
-ROS 2 Jazzy
-Gazebo Sim 8
-Python 3.12
-PX4 SITL
-CPU-based YOLO inference
-🚀 Version 1
+- Ubuntu 24.04
+- ROS 2 Jazzy
+- Gazebo Sim 8
+- Python 3.12
+- PX4 SITL
+- CPU-based YOLO inference
+
+## 🚀 Version 1
 
 The current version demonstrates a complete autonomous rescue mission:
 
+```
 YOLO Detection
       ↓
 Person Position
@@ -157,31 +159,35 @@ Simulated Assistance
 Return Home
       ↓
 Autonomous Landing
+```
 
 The system was tested successfully in Gazebo with a simulated rescue environment.
 
-🎥 Demonstration
+### 🎥 Demonstration
 
 A demonstration video and screenshots will be added here.
 
 Future versions will include a more advanced demonstration showing dynamic target tracking and improved autonomous behavior.
 
-🔮 Version 2 — Planned Improvements
+![Project Screenshot](version_1.png)
+
+## 🔮 Version 2 — Planned Improvements
 
 The next version will focus on making the drone better at following a moving person.
 
 Planned improvements:
 
-Dynamic person tracking
-Moving-target prediction
-Target velocity estimation
-Improved RGB/depth alignment
-Better camera-to-drone coordinate transformation
-Adaptive approach speed
-More robust target-loss handling
-Improved delivery behavior
-Better tracking of moving rescue targets
-🧩 Why This Project?
+- Dynamic person tracking
+- Moving-target prediction
+- Target velocity estimation
+- Improved RGB/depth alignment
+- Better camera-to-drone coordinate transformation
+- Adaptive approach speed
+- More robust target-loss handling
+- Improved delivery behavior
+- Better tracking of moving rescue targets
+
+## 🧩 Why This Project?
 
 This project combines several areas of robotics and AI:
 
@@ -189,7 +195,8 @@ Computer Vision + Depth Perception + ROS 2 + Autonomous Flight
 
 Instead of manually controlling the drone, the system allows the drone to make decisions based on what its sensors see.
 
-👨‍💻 Author
+## 👨‍💻 Author
+
 Hayat Ahmedjara
 
 AI & Machine Learning Engineer
@@ -198,16 +205,17 @@ Addis Ababa, Ethiopia
 
 Focus areas:
 
-Machine Learning
-Computer Vision
-Robotics
-LLM Engineering
-📌 Project Status
+- Machine Learning
+- Computer Vision
+- Robotics
+- LLM Engineering
 
-Version 1 — Completed ✅
+## 📌 Project Status
+
+### Version 1 — Completed ✅
 
 Autonomous simulated rescue mission successfully demonstrated.
 
-Version 2 — In Development 🚧
+### Version 2 — In Development 🚧
 
 Dynamic person tracking and improved target following.
