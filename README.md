@@ -28,38 +28,8 @@ EMERGENCY PACKAGE DELIVERED
 RETURN HOME
    ↓
 LAND
-cat > README.md <<'EOF'
-# 🚁 Autonomous AI Rescue Drone
-
-An autonomous rescue-drone simulation built with **ROS 2, PX4, Gazebo, YOLO11, and depth perception**.
-
-The drone uses computer vision to detect a person, estimates the person's distance using depth data, autonomously approaches the target, simulates emergency assistance, returns to its home position, and lands.
-
----
-
-## 🎯 Project Goal
-
-The goal is to simulate an autonomous drone capable of assisting a person during an emergency without manual piloting.
-
-### Autonomous Mission
-
-```text
-SEARCH
-   ↓
-PERSON DETECTED
-   ↓
-DEPTH ESTIMATION
-   ↓
-APPROACH PERSON
-   ↓
-DELIVERY RANGE
-   ↓
-EMERGENCY PACKAGE DELIVERED
-   ↓
-RETURN HOME
-   ↓
-LAND
 ```
+
 ### 🧠 System Architecture
 
 ```              Gazebo
@@ -86,40 +56,52 @@ LAND
                 ▼
           Gazebo X500
 ```
-✨ Features
-👁️ Computer Vision
-YOLO11 person detection
-Real-time person localization
-Bounding-box visualization
-Person center estimation
-Detection confidence
-📏 Depth Perception
-Depth camera integration
-Person-to-drone distance estimation
-RGB/depth coordinate mapping
-Real-time target distance
-🚁 Autonomous Flight
-PX4 Offboard control
-Autonomous takeoff
-Person approach
-Target centering
-Delivery-range detection
-Simulated emergency package delivery
-Return-to-home
-Autonomous landing
-🛠️ Technologies
-Technology	Purpose
-ROS 2 Jazzy	Robotics middleware
-PX4	Flight controller
-Gazebo Sim 8	Drone simulation
-YOLO11	Person detection
-Python	AI and control
-OpenCV	Computer vision
-cv_bridge	ROS image processing
-ROS-Gazebo Bridge	Sensor communication
-Micro XRCE-DDS	PX4 ↔ ROS 2 communication
-QGroundControl	Flight monitoring
-📂 Project Structure
+
+## ✨ Features
+
+### 👁️ Computer Vision
+
+- YOLO11 person detection
+- Real-time person localization
+- Bounding-box visualization
+- Person center estimation
+- Detection confidence
+
+### 📏 Depth Perception
+- Depth camera integration
+- Person-to-drone distance estimation
+- RGB/depth coordinate mapping
+- Real-time target distance
+
+### 🚁 Autonomous Flight
+- PX4 Offboard control
+- Autonomous takeoff
+- Person approach
+- Target centering
+- Delivery-range detection
+- Simulated emergency package delivery
+- Return-to-home
+- Autonomous landing
+
+## 🛠️ Technologies
+
+| Technology | Purpose |
+| :--- | :--- |
+| **ROS 2 Jazzy** | Robotics middleware |
+| **PX4** | Flight controller |
+| **Gazebo Sim 8** | Drone simulation |
+| **YOLO11** | Person detection |
+| **Python** | AI and control |
+| **OpenCV** | Computer vision |
+| **cv_bridge** | ROS image processing |
+| **ROS-Gazebo Bridge** | Sensor communication |
+| **Micro XRCE-DDS** | PX4 ↔ ROS 2 communication |
+| **QGroundControl** | Flight monitoring |
+
+
+### 📂 Project Structure
+
+```
 autonomous-ai-rescue-drone/
 │
 ├── ros2/
@@ -144,7 +126,9 @@ autonomous-ai-rescue-drone/
 ├── rescue_world.sdf
 ├── README.md
 └── .gitignore
-⚙️ Environment
+```
+
+## ⚙️ Environment
 
 Tested on:
 
