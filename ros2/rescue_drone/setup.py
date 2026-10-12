@@ -27,6 +27,17 @@ setup(
             'position_reader = rescue_drone.position_reader:main',
             'flight_controller = rescue_drone.flight_controller:main',
            'person_detector = rescue_drone.person_detector:main',
+           'person_tracker_v2 = rescue_drone.person_tracker_v2:main',
+           'person_motion_v2 = rescue_drone.person_motion_v2:main',
+           'person_prediction_v2 = rescue_drone.person_prediction_v2:main',
+            'follow_flight_v2 = rescue_drone.follow_flight_v2:main',
+           'intercept_controller_v2 = rescue_drone.intercept_controller_v2:main',
+           'first_flight_test = rescue_drone.first_flight_test:main',
+          'movement_test = rescue_drone.movement_test:main', 
+           'target_3d_v2 = rescue_drone.target_3d_v2:main',
+           'coordinate_test = rescue_drone.coordinate_test:main',
+           'rescue_brain_v2 = rescue_drone.rescue_brain_v2:main',
+           'rescue_flight_v2 = rescue_drone.rescue_flight_v2:main',
            'person_tracker = rescue_drone.person_tracker:main',
            'rescue_controller = rescue_drone.rescue_controller:main',
            'rescue_mission = rescue_drone.rescue_mission:main',
@@ -37,3 +48,4 @@ setup(
         ],
     },
 )
+
