@@ -150,6 +150,8 @@ Take off → Detect person → Estimate distance → Approach target
 
 Assistance is simulated; the project does not release a physical payload. Version 2 builds on this foundation with persistent person tracking and predictive target following.
 
+![Version 1 Gazebo rescue mission simulation](version_1.png)
+
 ## 🚁 Version 2 — Working Predictive Person Following
 
 Version 2 is implemented and working in the Gazebo/PX4 simulation. Its ROS 2 nodes provide a predictive target-following pipeline:
