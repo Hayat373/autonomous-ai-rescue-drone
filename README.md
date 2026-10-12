@@ -139,9 +139,9 @@ Tested on:
 - PX4 SITL
 - CPU-based YOLO inference
 
-## 🚀 Version 1
+## 🚀 Version 1 — Baseline Rescue Mission
 
-The current version demonstrates a complete autonomous rescue mission:
+The baseline version demonstrates the original autonomous rescue mission:
 
 ```
 YOLO Detection
@@ -161,31 +161,38 @@ Return Home
 Autonomous Landing
 ```
 
-The system was tested successfully in Gazebo with a simulated rescue environment.
+The V1 mission was tested in Gazebo with a simulated rescue environment. V2 extends the project with person tracking and target following.
 
-### 🎥 Demonstration
+## 🚁 Version 2 — Working Predictive Person Following
 
-A demonstration video and screenshots will be added here.
+Version 2 is implemented and working in the Gazebo/PX4 simulation. Its ROS 2 nodes provide a predictive target-following pipeline:
 
-Future versions will include a more advanced demonstration showing dynamic target tracking and improved autonomous behavior.
+```text
+YOLO11 + ByteTrack
+      ↓
+Tracked person position
+      ↓
+Smoothed image-space velocity
+      ↓
+Short-horizon position prediction
+      ↓
+Depth-based 3D target estimate
+      ↓
+PX4 Offboard follow controller
+      ↓
+Return home and land
+```
 
-![Project Screenshot](version_1.png)
+The V2 pipeline includes:
 
-## 🔮 Version 2 — Planned Improvements
+- YOLO11 person detection with persistent ByteTrack IDs
+- Smoothed person-motion estimates and predicted image position
+- Depth-based target distance estimation
+- Conservative PX4 Offboard following in Gazebo
+- Hovering when target data becomes stale
+- Automatic return-to-home and landing after the follow test
 
-The next version will focus on making the drone better at following a moving person.
-
-Planned improvements:
-
-- Dynamic person tracking
-- Moving-target prediction
-- Target velocity estimation
-- Improved RGB/depth alignment
-- Better camera-to-drone coordinate transformation
-- Adaptive approach speed
-- More robust target-loss handling
-- Improved delivery behavior
-- Better tracking of moving rescue targets
+The `rescue_brain_v2` node reports rescue decisions in dry-run mode. The separate `follow_flight_v2` node sends PX4 flight commands and is explicitly intended for simulation testing only. V2 demonstrates person following; it does not yet complete an integrated package-delivery rescue mission.
 
 ## 🧩 Why This Project?
 
@@ -216,6 +223,6 @@ Focus areas:
 
 Autonomous simulated rescue mission successfully demonstrated.
 
-### Version 2 — In Development 🚧
+### Version 2 — Working in Simulation ✅
 
-Dynamic person tracking and improved target following.
+Predictive person tracking, depth-based target estimation, and PX4 Offboard following with return and landing are implemented for Gazebo/PX4 SITL. Real-world flight and an integrated package-delivery mission are not part of the current V2.
