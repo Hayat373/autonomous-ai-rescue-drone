@@ -139,29 +139,16 @@ Tested on:
 - PX4 SITL
 - CPU-based YOLO inference
 
-## 🚀 Version 1 — Baseline Rescue Mission
+## 🚀 Version 1 — Autonomous Rescue Mission
 
-The baseline version demonstrates the original autonomous rescue mission:
+Version 1 is the project's baseline end-to-end rescue mission, tested in a simulated Gazebo environment. It combines person detection and depth-based distance estimation with PX4 Offboard control to guide the drone through the mission:
 
-```
-YOLO Detection
-      ↓
-Person Position
-      ↓
-Depth Distance
-      ↓
-Autonomous Approach
-      ↓
-Delivery Range
-      ↓
-Simulated Assistance
-      ↓
-Return Home
-      ↓
-Autonomous Landing
+```text
+Take off → Detect person → Estimate distance → Approach target
+         → Simulate assistance → Return home → Land
 ```
 
-The V1 mission was tested in Gazebo with a simulated rescue environment. V2 extends the project with person tracking and target following.
+Assistance is simulated; the project does not release a physical payload. Version 2 builds on this foundation with persistent person tracking and predictive target following.
 
 ## 🚁 Version 2 — Working Predictive Person Following
 
